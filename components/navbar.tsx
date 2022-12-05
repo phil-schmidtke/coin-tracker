@@ -16,7 +16,7 @@ export default function Navbar() {
                                 whileTap={{ scale: 0.9 }}
                                 className="text-xl font-bold px-4 py-2 cursor-pointer hover:bg-neutral-800 rounded-xl hover:drop-shadow-xl">Coin-Tracker</motion.button>
             </div>
-            <div className="flex">
+            <div className="md:flex hidden">
                 <motion.a whileHover={{
                             scale: 1.05,
                             transition: { duration: 0.2 },
