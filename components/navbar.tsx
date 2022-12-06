@@ -6,7 +6,7 @@ export default function Navbar() {
     return (
         <motion.div initial={{ y: -50 }}
                     animate={{ y: 0 }}
-                    transition={{ delay: 0.5 }}
+                    transition={{ delay: 0.05 }}
                     className="flex justify-between p-4">
             <div>
                 <motion.button whileHover={{
