@@ -47,7 +47,7 @@ export default function CurrentChart({data}: any) {
                 chart.timeScale().fitContent();
 
                 const newSeries = chart.addAreaSeries({ lineColor, topColor: areaTopColor, bottomColor: areaBottomColor });
-                newSeries.setData(initialData);
+                newSeries.setData(data.Data.Data);
 
                 window.addEventListener('resize', handleResize);
 
