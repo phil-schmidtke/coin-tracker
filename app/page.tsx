@@ -19,7 +19,8 @@ export default async function Home() {
         <CryptoList data={data.topTen.DISPLAY} active="BTC" />
       </div>
       <div className="md:w-2/3 w-full text-center p-4 mt-8">
-        <div className="border-2 border-neutral-800">
+        <h1 className="text-xl font-bold">BTC</h1>
+        <div className="border-2 border-neutral-800 mt-4">
           <CurrentChart data={data.historical} />
         </div>
       </div>
