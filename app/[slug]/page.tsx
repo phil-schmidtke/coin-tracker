@@ -21,7 +21,6 @@ export default async function Page({ params }: PageProps) {
     return (
         <div className="md:flex block">
             <div className="md:w-1/3 p-4">
-                <h1 className="text-xl font-bold">Top 10</h1>
                 <CryptoList data={data.topTen.DISPLAY} active={params.slug} />
             </div>
             <div className="md:w-2/3 w-full text-center p-4 mt-8">

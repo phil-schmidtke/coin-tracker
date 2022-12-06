@@ -11,12 +11,19 @@ export default function CryptoList({data, active}: CryptoListProps) {
 
     return (
         <div>
+            <motion.h1 initial={{ opacity: 0}} animate={{opacity: 100}} transition={{delay: 0.2, duration: 2}} className="text-xl font-bold">Top 10</motion.h1>
+            <motion.div initial={{ opacity: 0}} animate={{opacity: 100}} transition={{delay: 0.4, duration: 2}} className="flex justify-between mx-2 my-2">
+                <h2>Coin</h2>
+                <h2>Market Cap</h2>
+                <h2>Price</h2>
+            </motion.div>
             <motion.div initial={{ x: 50 }}
                     animate={{ x: 0 }}
                     transition={{ delay: 0.1 }}
-                    className={`flex justify-between my-4 bg-neutral-800 p-4 rounded-xl drop-shadow-2xl ${active === 'BTC' ? 'bg-gradient-to-r from-violet-800 via-purple-700 to-purple-500' : ''}`}
+                    className={`flex justify-between mb-4 bg-neutral-800 p-4 rounded-xl drop-shadow-2xl ${active === 'BTC' ? 'bg-gradient-to-r from-violet-800 via-purple-700 to-purple-500' : ''}`}
                     onClick={() => window.location.replace('/')} >
                 <h1>Bitcoin</h1>
+                <p>{data.BTC.USD.MKTCAP}</p>
                 <p>{data.BTC.USD.PRICE}</p>
             </motion.div>
             <motion.div initial={{ x: 50 }}
