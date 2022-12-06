@@ -18,7 +18,7 @@ export default async function Home() {
       <div className="md:w-1/3 p-4">
         <CryptoList data={data.topTen.DISPLAY} active="BTC" />
       </div>
-      <div className="w-2/3 text-center p-4 mt-8">
+      <div className="md:w-2/3 w-full text-center p-4 mt-8">
         <div className="border-2 border-neutral-800">
           <CurrentChart data={data.historical} />
         </div>
