@@ -19,15 +19,12 @@ export default async function Page({ params }: PageProps) {
     const data = await getData(params.slug)
 
     return (
-        <div className="md:flex block">
+        <div className="md:flex block overflow-x-hidden">
             <div className="md:w-1/3 p-4">
                 <CryptoList data={data.topTen.DISPLAY} active={params.slug} />
             </div>
             <div className="md:w-2/3 w-full text-center p-4 mt-8">
-                <h1 className="text-xl font-bold">{params.slug}</h1>
-                <div className="border-2 border-neutral-800 mt-4">
-                    <CurrentChart data={data.historical} />
-                </div>
+                <CurrentChart data={data.historical} />
             </div>
         </div>
     )

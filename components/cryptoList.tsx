@@ -34,7 +34,7 @@ export default function CryptoList({data, active}: CryptoListProps) {
             </motion.div>
             {ListData.map((item, index) => {
                 return (
-                    <CryptoListItem data={data} link={item.link} name={item.name} ticker={item.ticker} active={active} key={index}/>
+                    <CryptoListItem data={data} link={item.link} name={item.name} ticker={item.ticker} active={active} key={index} delay={index}/>
                 )
             })}
         </div>
