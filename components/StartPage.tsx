@@ -7,7 +7,7 @@ import CryptoList from "./cryptoList";
 import CurrentChart from "./currentChart";
 import Info from "./info";
 
-export default function StartPage({data}: any) {
+export default function StartPage({ data }: any) {
     const [activeSymbol, setActiveSymbol] = useState('BTC');
     const [histData, setHistData] = useState(data.historical)
     const [loading, setLoading] = useState(false)
@@ -18,7 +18,7 @@ export default function StartPage({data}: any) {
         setHistData(histData)
         setLoading(false)
     }
-    
+
     return (
         <div>
             <div className="md:flex block">
@@ -27,15 +27,15 @@ export default function StartPage({data}: any) {
                 </div>
                 <div className="md:w-2/3 w-full text-center p-4 mt-8">
                     {loading ? <><div className="flex justify-center items-center h-screen">
-                                    <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-fuchsia-900"></div>
-                                </div></>
-                                : 
-                                <motion.div initial={{x: 75, opacity: 0}} animate={{x:0, opacity: 1}} transition={{delay: 0.2}}>
-                                    <h1 className="text-xl font-bold">{activeSymbol}</h1>
-                                    <div className="border-2 border-neutral-800 mt-4">
-                                    <CurrentChart data={histData} label={activeSymbol} />
-                                    </div>
-                                </motion.div>}
+                        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-fuchsia-900"></div>
+                    </div></>
+                        :
+                        <motion.div initial={{ x: 75, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.2 }}>
+                            <h1 className="text-xl font-bold">{activeSymbol}</h1>
+                            <div className="border-2 border-neutral-800 mt-4">
+                                <CurrentChart data={histData} label={activeSymbol} />
+                            </div>
+                        </motion.div>}
                 </div>
             </div>
             <div className="m-4">

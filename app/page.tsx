@@ -5,7 +5,7 @@ import { getTopTen } from "../utils/getTopTen"
 async function getData() {
   const topTen = await getTopTen()
   const historical = await getHistorical('BTC')
-  const data = {topTen, historical}
+  const data = { topTen, historical }
   return data
 }
 
