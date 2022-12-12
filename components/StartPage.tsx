@@ -39,7 +39,7 @@ export default function StartPage({data}: any) {
                 </div>
             </div>
             <div className="m-4">
-                <Info />
+                <Info activeSymbol={activeSymbol} />
             </div>
         </div>
     )
