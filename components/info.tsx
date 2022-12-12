@@ -10,8 +10,8 @@ export default function Info({ activeSymbol }: { activeSymbol: string }) {
     return (
       <InfoComponent>
         <div>
-          <h2>{BTC.title}</h2>
-          <p>{BTC.text}</p>
+          <h2 className="text-xl">{BTC.title}</h2>
+          <p className="mt-2">{BTC.text}</p>
         </div>
       </InfoComponent>
     )
@@ -19,8 +19,8 @@ export default function Info({ activeSymbol }: { activeSymbol: string }) {
     return (
       <InfoComponent>
         <div>
-          <h2>{ETH.title}</h2>
-          <p>{ETH.text}</p>
+          <h2 className="text-xl">{ETH.title}</h2>
+          <p className="mt-2">{ETH.text}</p>
         </div>
       </InfoComponent>
     )
@@ -28,8 +28,8 @@ export default function Info({ activeSymbol }: { activeSymbol: string }) {
     return (
       <InfoComponent>
         <div>
-          <h2>{USDT.title}</h2>
-          <p>{USDT.text}</p>
+          <h2 className="text-xl">{USDT.title}</h2>
+          <p className="mt-2">{USDT.text}</p>
         </div>
       </InfoComponent>
     )
@@ -37,8 +37,8 @@ export default function Info({ activeSymbol }: { activeSymbol: string }) {
     return (
       <InfoComponent>
         <div>
-          <h2>{BNB.title}</h2>
-          <p>{BNB.text}</p>
+          <h2 className="text-xl">{BNB.title}</h2>
+          <p className="mt-2">{BNB.text}</p>
         </div>
       </InfoComponent>
     )
@@ -46,8 +46,8 @@ export default function Info({ activeSymbol }: { activeSymbol: string }) {
     return (
       <InfoComponent>
         <div>
-          <h2>{USDC.title}</h2>
-          <p>{USDC.text}</p>
+          <h2 className="text-xl">{USDC.title}</h2>
+          <p className="mt-2">{USDC.text}</p>
         </div>
       </InfoComponent>
     )
@@ -55,8 +55,8 @@ export default function Info({ activeSymbol }: { activeSymbol: string }) {
     return (
       <InfoComponent>
         <div>
-          <h2>{BUSD.title}</h2>
-          <p>{BUSD.text}</p>
+          <h2 className="text-xl">{BUSD.title}</h2>
+          <p className="mt-2">{BUSD.text}</p>
         </div>
       </InfoComponent>
     )
@@ -64,8 +64,8 @@ export default function Info({ activeSymbol }: { activeSymbol: string }) {
     return (
       <InfoComponent>
         <div>
-          <h2>{XRP.title}</h2>
-          <p>{XRP.text}</p>
+          <h2 className="text-xl">{XRP.title}</h2>
+          <p className="mt-2">{XRP.text}</p>
         </div>
       </InfoComponent>
     )
@@ -73,8 +73,8 @@ export default function Info({ activeSymbol }: { activeSymbol: string }) {
     return (
       <InfoComponent>
         <div>
-          <h2>{DOGE.title}</h2>
-          <p>{DOGE.text}</p>
+          <h2 className="text-xl">{DOGE.title}</h2>
+          <p className="mt-2">{DOGE.text}</p>
         </div>
       </InfoComponent>
     )
@@ -82,8 +82,8 @@ export default function Info({ activeSymbol }: { activeSymbol: string }) {
     return (
       <InfoComponent>
         <div>
-          <h2>{ADA.title}</h2>
-          <p>{ADA.text}</p>
+          <h2 className="text-xl">{ADA.title}</h2>
+          <p className="mt-2">{ADA.text}</p>
         </div>
       </InfoComponent>
     )
@@ -91,8 +91,8 @@ export default function Info({ activeSymbol }: { activeSymbol: string }) {
     return (
       <InfoComponent>
         <div>
-          <h2>{MATIC.title}</h2>
-          <p>{MATIC.text}</p>
+          <h2 className="text-xl">{MATIC.title}</h2>
+          <p className="mt-2">{MATIC.text}</p>
         </div>
       </InfoComponent>
     )
@@ -100,8 +100,8 @@ export default function Info({ activeSymbol }: { activeSymbol: string }) {
     return (
       <InfoComponent>
         <div>
-          <h2>Coming soon!</h2>
-          <p>More info will be added soon!</p>
+          <h2 className="text-xl">Coming soon!</h2>
+          <p className="mt-2">More info will be added soon!</p>
         </div>
       </InfoComponent>
     )
