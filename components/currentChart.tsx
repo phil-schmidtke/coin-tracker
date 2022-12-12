@@ -62,7 +62,7 @@ export default function CurrentChart({data}: any) {
 	);
 
     return (
-        <motion.div initial={{x: 100}} animate={{x:0}} transition={{delay: 0.8}}>
+        <motion.div initial={{x: 100}} animate={{x:0}} transition={{delay: 0.2}}>
             <h1 className="text-xl font-bold">BTC</h1>
             <div className="border-2 border-neutral-800 mt-4">
                 <div
