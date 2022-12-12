@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { getHistorical } from "../utils/getHistorical";
 import CryptoList from "./cryptoList";
@@ -29,7 +30,12 @@ export default function StartPage({data}: any) {
                                     <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-fuchsia-900"></div>
                                 </div></>
                                 : 
-                                <CurrentChart data={histData} label={activeSymbol} />}
+                                <motion.div initial={{x: 75, opacity: 0}} animate={{x:0, opacity: 1}} transition={{delay: 0.2}}>
+                                    <h1 className="text-xl font-bold">{activeSymbol}</h1>
+                                    <div className="border-2 border-neutral-800 mt-4">
+                                    <CurrentChart data={histData} label={activeSymbol} />
+                                    </div>
+                                </motion.div>}
                 </div>
             </div>
             <div className="m-4">

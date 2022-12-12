@@ -62,13 +62,6 @@ export default function CurrentChart({data, label}: any) {
 	);
 
     return (
-        <motion.div initial={{x: 75}} animate={{x:0}} transition={{delay: 0.2}}>
-            <h1 className="text-xl font-bold">{label}</h1>
-            <div className="border-2 border-neutral-800 mt-4">
-                <div
-                    ref={chartContainerRef}
-                />
-            </div>
-        </motion.div>
+        <div ref={chartContainerRef} />
 	);
 }
