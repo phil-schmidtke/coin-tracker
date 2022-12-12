@@ -4,9 +4,8 @@ import { motion } from "framer-motion";
 
 export default function Navbar() {
     return (
-        <motion.div initial={{ y: -50 }}
-                    animate={{ y: 0 }}
-                    transition={{ delay: 0.05 }}
+        <motion.div initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     className="flex justify-between p-4">
             <div>
                 <motion.button whileHover={{
