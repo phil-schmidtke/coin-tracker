@@ -9,14 +9,13 @@ import Info from "./info";
 export default function StartPage({data}: any) {
     const [activeSymbol, setActiveSymbol] = useState('BTC');
     const [histData, setHistData] = useState(data.historical)
+    const [loading, setLoading] = useState(false)
 
     async function getHist(symbol: string) {
-        console.log("get historfical")
-        console.log("symbol", symbol)
+        setLoading(true)
         const histData = await getHistorical(symbol)
-        console.log("set ata")
         setHistData(histData)
-        console.log("hist", histData)
+        setLoading(false)
     }
     
     return (
@@ -26,7 +25,11 @@ export default function StartPage({data}: any) {
                     <CryptoList data={data.topTen.DISPLAY} setActiveSymbol={setActiveSymbol} active={activeSymbol} getHist={getHist} />
                 </div>
                 <div className="md:w-2/3 w-full text-center p-4 mt-8">
-                    <CurrentChart data={histData} />
+                    {loading ? <><div className="flex justify-center items-center h-screen">
+                                    <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-fuchsia-900"></div>
+                                </div></>
+                                : 
+                                <CurrentChart data={histData} />}
                 </div>
             </div>
             <div className="m-4">
