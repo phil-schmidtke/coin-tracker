@@ -1,27 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import CryptoListItem from "./cryptoListItem";
 
 type CryptoListProps = {
     data: any;
+    setActiveSymbol: any;
+    getHist: (symbol: string) => Promise<void>;
     active: string;
 }
 
-export default function CryptoList({data, active}: CryptoListProps) {
-
+export default function CryptoList({data, setActiveSymbol, getHist, active}: CryptoListProps) {
+    
     const ListData = [
-        {link: "/BTC", name: "Bitcoin", ticker: "BTC"},
-        {link: "/ETH", name: "Ethereum", ticker: "ETH"},
-        {link: "/USDT", name: "Tether", ticker: "USDT"},
-        {link: "/BNB", name: "BNB", ticker: "BNB"},
-        {link: "/USDC", name: "USD Coin", ticker: "USDC"},
-        {link: "/BUSD", name: "Binance USD", ticker: "BUSD"},
-        {link: "/XRP", name: "XRP", ticker: "XRP"},
-        {link: "/DOGE", name: "Dogecoin", ticker: "DOGE"},
-        {link: "/ADA", name: "Cardano", ticker: "ADA"},
-        {link: "/MATIC", name: "Polygon", ticker: "MATIC"},
+        {link: "BTC", name: "Bitcoin", ticker: "BTC"},
+        {link: "ETH", name: "Ethereum", ticker: "ETH"},
+        {link: "USDT", name: "Tether", ticker: "USDT"},
+        {link: "BNB", name: "BNB", ticker: "BNB"},
+        {link: "USDC", name: "USD Coin", ticker: "USDC"},
+        {link: "BUSD", name: "Binance USD", ticker: "BUSD"},
+        {link: "XRP", name: "XRP", ticker: "XRP"},
+        {link: "DOGE", name: "Dogecoin", ticker: "DOGE"},
+        {link: "ADA", name: "Cardano", ticker: "ADA"},
+        {link: "MATIC", name: "Polygon", ticker: "MATIC"},
     ]
 
     return (
@@ -34,7 +35,7 @@ export default function CryptoList({data, active}: CryptoListProps) {
             </motion.div>
             {ListData.map((item, index) => {
                 return (
-                    <CryptoListItem data={data} link={item.link} name={item.name} ticker={item.ticker} active={active} key={index} delay={index}/>
+                    <CryptoListItem data={data} setActiveSymbol={setActiveSymbol} getHist={getHist} link={item.link} name={item.name} ticker={item.ticker} active={active} key={index} delay={index}/>
                 )
             })}
         </div>

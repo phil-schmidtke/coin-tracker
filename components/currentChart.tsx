@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 
 export default function CurrentChart({data}: any) {
 	const chartContainerRef = useRef() as React.MutableRefObject<HTMLInputElement>;
-
     useEffect(
 		() => {
             if (chartContainerRef.current) {
@@ -59,7 +58,7 @@ export default function CurrentChart({data}: any) {
                 };
             }
 		},
-		[]
+		[data]
 	);
 
     return (

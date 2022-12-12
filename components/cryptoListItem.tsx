@@ -1,11 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 
-export default function CryptoListItem({data, link, name, ticker, active, delay}: any) {
+type ItemProps = {
+    data: any;
+    setActiveSymbol: any;
+    getHist: (symbol: string) => Promise<void>;
+    link: string;
+    name: string;
+    ticker: string;
+    active: string;
+    delay: any;
+}
+
+export default function CryptoListItem({data, setActiveSymbol, getHist, link, name, ticker, active, delay}: ItemProps) {
+
+    function update() {
+        console.log("upadte")
+        setActiveSymbol(link)
+        getHist(link)
+    }
+
     return (
-        <Link href={link}>
+        <div onClick={() => update()}>
             <motion.div initial={{ x: 50 }}
                         animate={{ x: 0 }}
                         transition={{ delay: 0.1 * delay }}
@@ -15,6 +32,6 @@ export default function CryptoListItem({data, link, name, ticker, active, delay}
                     <p>{data[ticker].USD.MKTCAP}</p>
                     <p>{data[ticker].USD.PRICE}</p>
             </motion.div>
-        </Link>
+        </div>
     )
 }
