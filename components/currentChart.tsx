@@ -4,7 +4,7 @@ import { ColorType, createChart } from "lightweight-charts";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-export default function CurrentChart({data}: any) {
+export default function CurrentChart({data, label}: any) {
 	const chartContainerRef = useRef() as React.MutableRefObject<HTMLInputElement>;
     useEffect(
 		() => {
@@ -62,8 +62,8 @@ export default function CurrentChart({data}: any) {
 	);
 
     return (
-        <motion.div initial={{x: 100}} animate={{x:0}} transition={{delay: 0.2}}>
-            <h1 className="text-xl font-bold">BTC</h1>
+        <motion.div initial={{x: 75}} animate={{x:0}} transition={{delay: 0.2}}>
+            <h1 className="text-xl font-bold">{label}</h1>
             <div className="border-2 border-neutral-800 mt-4">
                 <div
                     ref={chartContainerRef}

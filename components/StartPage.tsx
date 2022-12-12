@@ -29,7 +29,7 @@ export default function StartPage({data}: any) {
                                     <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-fuchsia-900"></div>
                                 </div></>
                                 : 
-                                <CurrentChart data={histData} />}
+                                <CurrentChart data={histData} label={activeSymbol} />}
                 </div>
             </div>
             <div className="m-4">
