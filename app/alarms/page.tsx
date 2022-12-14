@@ -1,3 +1,5 @@
+import Select from "../../components/ui/select";
+
 export default function Alarms() {
     return (
         <div>
@@ -9,9 +11,11 @@ export default function Alarms() {
                     This is our way of an anonomys Web3 alarm. <br /> The Image will be connected to your Alarm Settings.</p>
                 </div>
             </div>
-            <div>
+            <div className="mt-8">
                 <div>
-                    
+                    <div className="w-1/2 my-2 mx-4">
+                        <Select />
+                    </div>
                 </div>
             </div>
         </div>
