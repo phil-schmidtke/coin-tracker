@@ -42,7 +42,7 @@ export default function CurrentChart({data, label}: any) {
                         horzLines: { color: '#262626' },
                     },
                     width: chartContainerRef.current.clientWidth,
-                    height: 500,
+                    height: 700,
                 });
                 chart.timeScale().fitContent();
 
@@ -62,6 +62,11 @@ export default function CurrentChart({data, label}: any) {
 	);
 
     return (
-        <div ref={chartContainerRef} />
+        <motion.div initial={{ x: 75, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.8 }}>
+            <h1 className="text-xl font-bold">{label}</h1>
+            <div className="border-2 border-neutral-800 mt-4">
+                <div ref={chartContainerRef} />
+            </div>
+        </motion.div>
 	);
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import CryptoListItem from "./cryptoListItem";
+import CryptoListItem from "./CryptoListItem";
 
 type CryptoListProps = {
     data: any;

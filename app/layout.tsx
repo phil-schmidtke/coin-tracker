@@ -1,4 +1,4 @@
-import Navbar from '../components/navbar'
+import Navbar from '../components/Navbar'
 import './globals.css'
 
 export default function RootLayout({
@@ -13,11 +13,11 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>
+      <body className='overflow-hidden'>
         <nav>
           <Navbar />
         </nav>
-        <main className='overflow-x-hidden overflow-y-hidden'>
+        <main>
           {children}
         </main>
       </body>
