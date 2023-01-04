@@ -2,7 +2,7 @@ import { Inter } from '@next/font/google'
 import styles from './page.module.css'
 import { getTopTen } from '../utils/getTopTen'
 import { getHistorical } from '../utils/getHistorical'
-import StartPage from '../components/StartPage'
+import StartPage from '../components/startPage'
 
 const inter = Inter({ subsets: ['latin'] })
 

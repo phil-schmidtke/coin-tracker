@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { getHistorical } from "../utils/getHistorical";
-import CryptoList from "./CryptoList";
-import CurrentChart from "./CurrentChart";
-import Info from "./Info";
+import CryptoList from "./cryptoList";
+import CurrentChart from "./currentChart";
+import Info from "./info";
 
 export default function StartPage({ data }: any) {
     const [activeSymbol, setActiveSymbol] = useState('BTC');

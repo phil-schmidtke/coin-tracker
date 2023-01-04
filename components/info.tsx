@@ -1,7 +1,7 @@
 "use client";
 
 import { BTC, ETH, USDT, BNB, USDC, BUSD, XRP, DOGE, ADA, MATIC } from "../utils/infoTexts";
-import InfoComponent from "./InfoComponent";
+import InfoComponent from "./infoComponent";
 
 export default function Info({ activeSymbol }: { activeSymbol: string }) {
   if (activeSymbol === 'BTC') {
